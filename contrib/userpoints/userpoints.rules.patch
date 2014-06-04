@@ -1,0 +1,12 @@
+diff diff --git a/userpoints_rules.rules.inc b/userpoints_rules.rules.inc1
+--- a/userpoints_rules.rules.inc
++++ b/userpoints_rules.rules.inc
+@@ -195,7 +195,7 @@
+     'expirydate' => $params['expirydate'] ? $params['expirydate'] : NULL,
+   ) + $params;
+ 
+-  unset($params['state']);
++
+   unset($params['user']);
+   unset($params['entity']);
+   unset($params['settings']);
