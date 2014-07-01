@@ -1,0 +1,13 @@
+diff --git "a/profiles/imagex_installkit/modules/contrib/workbench_moderation/workbench_moderation.rules.inc" "b/profiles/imagex_installkit/modules/contrib/workbench_moderation/workbench_moderation.rules.inc"
+index d16b33e..ff62abe 100644
+--- "a/profiles/imagex_installkit/modules/contrib/workbench_moderation/workbench_moderation.rules.inc"
++++ "b/profiles/imagex_installkit/modules/contrib/workbench_moderation/workbench_moderation.rules.inc"
+@@ -228,7 +228,7 @@ function workbench_moderation_rules_condition_content_is_live_revision($node) {
+  *  TRUE/FALSE depending on if the nodes current state matches selected state.
+  */
+ function workbench_moderation_rules_condition_contents_current_state($node, $moderation_state) {
+-  if (!is_object($node)) {
++  if (!is_object($node) || !isset($node->workbench_moderation['current']->state)) {
+     return FALSE;
+   }
+
